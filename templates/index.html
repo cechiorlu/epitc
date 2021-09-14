@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>EPITC</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="heading">
+            <a href="">
+                <h1>ECONOMIC PIPELINE INSULATION THICKNESS CALCULATOR</h1>
+            </a>
+        </div>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">DOWNLOAD SOURCE CODE</a>
+    </div>
+    <div class="container">
+        <div id="left-wrap">
+            <div class="about">
+                <p>
+                    This application appraises pipe thermal insulation and assigns naira value to the energy savings
+                    provided by the insulation. It provides the data required to calculate the economic pipe insulation
+                    thickness (thickness of insulation that both meets all service specific requirements and offers the
+                    least total cost).
+                </p>
+                <p>
+                    EPITC is an open source project licensed under <a href="http://" target="_blank"
+                        rel="noopener noreferrer">UNIVERSITY OF LAGOS LICENSE</a>. To contribute, visit our <a
+                        href="http://" target="_blank" rel="noopener noreferrer">repo</a> to read up on our contributing
+                    guidelines.
+                </p>
+            </div>
+
+            <div class="calculator">
+                <form action="" method="post">
+                    <div class="block">
+                        <label for="temp2">Desired temperature of pipe after insulation (oC):</label>
+                        <input type="text" name="temp2" id="temp2" required>
+                    </div>
+                    <div class="block">
+                        <label for="temp1">Temperature of pipe without insulation (oC):</label>
+                        <input type="text" name="temp1" id="temp1" required>
+                    </div>
+                    <div class="block">
+                        <label for="flux-density">Heat loss per meter of pipe, Q (W/m):</label>
+                        <input type="text" name="flux_density" id="flux-density" required>
+                    </div>
+                    <div class="row">
+                        <div class="block col-6">
+                            <label for="pipe-length">Length of pipe (m):</label>
+                            <input type="text" name="pipe_length" id="pipe-length" required>
+                        </div>
+                        <div class="block col-6">
+                            <label for="pipe-size">Pipe size (m):</label>
+                            <input type="text" name="pipe_size" id="pipe-size" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="block col-6">
+                            <label for="Insulation-mat">Insulation Material</label>
+                            <select name="insulation_mat" id="insulation-mat">
+                                <option value="fiberglass">fiberglass</option>
+                                <option value="rockWool">rock wool</option>
+                                <option value="polyurethane">polyurethane</option>
+                                <option value="cellularGlass">Cellular Glass</option>
+                                <option value="calciumSilicate">Calcium Silicate</option>
+                            </select>
+                        </div>
+                        <div class="block col-6">
+                            <label for="runtime"> Runtime:</label>
+                            <input type="text" name="runtime" id="runtime" placeholder="hrs/week">
+                        </div>
+                    </div>
+
+                    <button type="submit">CALCULATE</button>
+                </form>
+            </div>
+        </div>
+        <div id="right-wrap">
+            <div id="scroll-up">
+                <img src="../static/images/Arrow.png" alt="arrow up" id="arrow-up">
+            </div>
+
+            <div id="results">    
+                <div class="plots"></div>
+    
+                <div class="table">
+                    <table id="results-table">
+                        <thead>
+                            <tr>
+                                <th>Temperature (oC)</th>
+                                <th>Thickness</th>
+                                <th>Cost of Insulation</th>
+                                <th>Annual Energy Savings</th>
+                                <th>Estimated Recovery Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+<!--                        Use Jinja templates {{ variable }}-->
+                            <tr>
+                                <td>{{ var['temp1'] }}</td>
+                                <td>{{ var['insulation_mat'] }}</td>
+                                <td>cost1</td>
+                                <td>ecost1</td>
+                                <td>t1</td>
+                            </tr>
+                            <tr>
+                                <td>temp2</td>
+                                <td>ins2</td>
+                                <td>cost2</td>
+                                <td>ecost2</td>
+                                <td>t2</td>
+                            </tr>
+                            <tr>
+                                <td>temp3</td>
+                                <td>ins3</td>
+                                <td>cost3</td>
+                                <td>ecost3</td>
+                                <td>t3</td>
+                            </tr>
+                            <tr>
+                                <td>temp4</td>
+                                <td>ins4</td>
+                                <td>cost4</td>
+                                <td>ecost4</td>
+                                <td>t4</td>
+                            </tr>
+                            <tr>
+                                <td>temp5</td>
+                                <td>ins5</td>
+                                <td>cost5</td>
+                                <td>ecost5</td>
+                                <td>t5</td>
+                            </tr>
+                            <tr>
+                                <td>temp5</td>
+                                <td>ins5</td>
+                                <td>cost5</td>
+                                <td>ecost5</td>
+                                <td>t5</td>
+                            </tr>
+                            <tr>
+                                <td>temp5</td>
+                                <td>ins5</td>
+                                <td>cost5</td>
+                                <td>ecost5</td>
+                                <td>t5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="add-info"></div>
+            </div>
+        </div>
+            </div>
+
+    </div>
+
+    <div class="footer"></div>
+
+    <script src="../static/scripts.js"></script>
+
+</body>
+
+</html>
