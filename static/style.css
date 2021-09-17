@@ -21,11 +21,11 @@ h1{
 }
 
 p{
-    font-size: 0.9rem;
-    line-height: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
     padding-bottom: 1.1rem;
     color: #0A0A0A;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 a{
@@ -60,7 +60,6 @@ a:hover{
     width: 40%;
     padding-right: 30px;
 }
-
 
 .calculator{
     background-color: #ffffff;
