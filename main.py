@@ -7,7 +7,7 @@ app = Flask(__name__)
 import calc_func as calc
 
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/', methods=["GET"])
 def serve_app():
     return render_template('index.html')
 
