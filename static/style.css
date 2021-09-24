@@ -1,44 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     min-width: 1300px;
     font-family: 'Lora', serif;
     background-color: #eaeaec;
     background-image: url(./images/background_img.jpg);
     background-repeat: repeat;
+    overflow: hidden;
 }
 
-h1{
+h1 {
     color: #5462B6;
     font-size: 1.5em;
     font-weight: 500;
 }
 
-p{
-    font-size: 1rem;
-    line-height: 1.3rem;
+p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
     padding-bottom: 1.1rem;
     color: #0A0A0A;
-    font-weight: 800;
+    font-weight: 500;
 }
 
-a{
+a {
     text-decoration: none;
     color: #bfbfbf;
     transition: all 0.35s ease 0s;
 }
 
-a:hover{
+a:hover {
     color: #979797;
 }
 
-.header{
+.header {
     width: 100%;
     padding: 15px 5%;
     background-color: #ffffff;
@@ -47,7 +47,7 @@ a:hover{
     justify-content: space-between;
 }
 
-.container{
+.container {
     width: 90%;
     margin: auto;
     padding-top: 15px;
@@ -56,28 +56,31 @@ a:hover{
     justify-content: space-between;
 }
 
-#left-wrap{
+#left-wrap {
     width: 40%;
     padding-right: 30px;
 }
 
-.calculator{
-    background-color: #ffffff;
-    width: 100%;
-    height: 450px;
-    padding: 35px 45px;
-    border-radius: 10px;
-
+#right-wrap {
+    width: 55%;
+    position: relative;
 }
 
-label{
+.calculator, .about {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 35px 45px;
+    border-radius: 10px;
+}
+
+label {
     color: #0A0A0A;
     font-size: 0.9rem;
     font-weight: 500;
     width: 100%;
 }
 
-input, select{
+input {
     width: 100%;
     padding: 7px;
     margin-top: 5px;
@@ -85,21 +88,32 @@ input, select{
     border: none;
 }
 
-.block{
+select {
+    width: 100%;
+    padding: 7px;
+    margin-top: 5px;
+    background-color: #e1f2ff;
+    border: none;
+}
+
+.block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 10px;
 }
 
-.row{
+.row {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.col-6{
+.col-6 {
     width: 48.5%;
 }
 
-button{
+button {
     width: 100%;
     padding: 10px;
     margin-top: 15px;
@@ -111,22 +125,17 @@ button{
     transition: all 0.35s ease 0s;
 }
 
-button:hover{
+button:hover {
     background-color: #f1bb6a;
 }
 
-#right-wrap{
-    width: 55%;
-    height: 82vh;
-    position: relative;
-}
 
-#results{
+#results {
     overflow-y: scroll;
     height: inherit;
 }
 
-.plots{
+.plots {
     width: 100%;
     height: 350px;
     background-color: #ffffff;
@@ -134,110 +143,77 @@ button:hover{
     margin-bottom: 20px;
 }
 
-.table{
+.table {
     background-color: #ffffff;
     width: 100%;
-    height: 300px;
     padding: 15px;
     margin-bottom: 20px;
 }
 
-.add-info{
+.add-info {
     width: 100%;
     height: 350px;
     background-color: #ffffff;
     padding: 15px;
 }
 
-#scroll-up{
+#scroll-up {
     display: none;
     position: absolute;
     bottom: 5px;
     right: 30px;
     z-index: 99;
     background-color: #f1a96a;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%; 
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
     cursor: pointer;
     text-align: center;
     transition: all 0.35s ease-in-out 0s;
 }
 
-#scroll-up:hover{
+#scroll-up:hover {
     background-color: #f1bb6a;
 }
 
-#arrow-up{
-    width: 50px;
-    height: 50px;
+#arrow-up {
+    width: 40px;
+    height: 40px;
 }
 
-.footer{
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    bottom: 0;
-    background-color: #5462B6;
-}
-
-/* input{
+button {
     padding: 15px;
-    width: 70px;
-    height: 30px;
-    border: .5px solid black;
-    border-radius: 2px;
 }
 
-button{
-    padding: 15px;
-} */
+.pb-20{
+    padding-bottom: 20px;
+}
 
-
-/* .table{
+.table {
     width: 100%;
     background-color: whitesmoke;
-    /* font-family: ; */
-    /* font-size: ; */
-/* }
+}
 
-#results-table{
+#results-table {
     width: 100%;
     border-collapse: collapse;
 }
 
-#results-table td, #results-table th{
+#results-table td, #results-table th {
     border: 1px solid #ddd;
     padding: 10px;
 }
 
-#results-table tr:nth-child(even){
+#results-table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-#results-table tr:hover{
+#results-table tr:hover {
     background-color: #ddd;
 }
 
-#results-table th{
+#results-table th {
     padding: 12px 10;
     text-align: left;
     background-color: #D9D9D9;
-} */
-
-
-
-
-
-/* 
-
-.footer{
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #24252A;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-} */
+}

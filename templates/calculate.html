@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>EPITC</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="heading">
+            <a href="">
+                <h1>ECONOMIC PIPELINE INSULATION THICKNESS CALCULATOR</h1>
+            </a>
+        </div>
+        <a href="https://github.com/cechiorlu/epitc" target="_blank" rel="noopener noreferrer">DOWNLOAD SOURCE CODE</a>
+    </div>
+    <div class="container">
+        <div id="left-wrap">
+            <div class="about">
+                <p>
+                    This application appraises hot pipe systems and calculates the optimum insulation
+                    thickness (thickness of insulation that both meets all service specific requirements and offers the
+                    least total cost).
+                </p>
+                <p>
+                    EPITC is an open source project licensed under the <a
+                        href="https://github.com/cechiorlu/epitc/blob/main/LICENSE" target="_blank"
+                        rel="noopener noreferrer">GPL-3.0 License</a>. To contribute, visit our <a
+                        href="https://github.com/cechiorlu/epitc" target="_blank" rel="noopener noreferrer">github
+                        repository</a> to
+                    read up on our contributing guidelines.
+                </p>
+                <p>
+
+                </p>
+            </div>
+        </div>
+
+        <div id="right-wrap">
+            <div id="scroll-up">
+                <img src="../static/images/Arrow.png" alt="arrow up" id="arrow-up">
+            </div>
+
+            <div id="results">
+                <div class="table">
+                    <table id="results-table">
+                        <thead>
+                            <tr>
+                                <th>Temperature (K)</th>
+                                <th>Thickness (m)</th>
+                                <th>Total Cost (N)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ results['x'][1] }}</td>
+                                <td>{{ thickness }}</td>
+                                <td>{{ results['fun'] }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="plots">
+                    <div class="row pb-20">
+                        Number of Iterations: {{ results['niter'] }}
+                    </div>
+                     <div class="row pb-20">
+                        Function Evaluations: {{ results['nfev'] }}
+                    </div>
+                     <div class="row pb-20">
+                        Execution Time: {{ results['execution_time'] }}
+                    </div>
+                     <div class="row pb-20">
+                        Constraint Violation: {{ results['constr_violation'] }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="../static/scripts.js"></script>
+
+</body>
+
+</html>
