@@ -41,3 +41,7 @@ def calculate():
         thickness = results['x'][0] - pipe_size
 
         return render_template('calculate.html', results=results, thickness=thickness)
+
+
+if __name__ == "__main__":
+    app.run()
