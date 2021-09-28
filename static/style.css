@@ -6,7 +6,6 @@
 }
 
 body {
-    min-width: 1300px;
     font-family: 'Lora', serif;
     background-color: #eaeaec;
     background-image: url(./images/background_img.jpg);
@@ -129,7 +128,6 @@ button:hover {
     background-color: #f1bb6a;
 }
 
-
 #results {
     overflow-y: scroll;
     height: inherit;
@@ -185,7 +183,7 @@ button {
     padding: 15px;
 }
 
-.pb-20{
+.pb-20 {
     padding-bottom: 20px;
 }
 
@@ -216,4 +214,43 @@ button {
     padding: 12px 10;
     text-align: left;
     background-color: #D9D9D9;
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        overflow-y: auto;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    #left-wrap {
+        width: 80%;
+        padding-right: 0px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    #right-wrap {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 620px) {
+   #gh-link{
+       display: none;
+   }
+
+   h1{
+       text-align: center;
+   }
+
+   .row{
+       display: flex;
+       flex-direction: column;
+   }
+
+   .col-6{
+       width: 100%;
+   }
 }
