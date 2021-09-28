@@ -43,5 +43,5 @@ def calculate():
         return render_template('calculate.html', results=results, thickness=thickness)
 
 
-# if __name__ == "__main__":
-#     app.run()
+if __name__ == "__main__":
+    app.run()
