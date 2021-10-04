@@ -1,22 +1,20 @@
 import numpy as np
 
 
-def lagrange_interpolation(argx, argy, xp):
-    # args argx, argy are lists while xp is a float data type
-    # argx is temperature
-    # argy is conductivity
-    # xp is tm
-    # returns thermal conductivity
-    x = np.array(argx, float)
-    y = np.array(argy, float)
+def lagrange_interpolation(temp, k, tp):
+    # temp and k are lists while tm is a float data type
+    # returns thermal conductivity, kp
+    
+    x = np.array(temp, float)
+    y = np.array(k, float)
 
-    yp = 0
-
+    kp = 0
+       
+    # lagrange interpolation from number of data points corresponding to len of temp and k
     for xi, yi in zip(x, y):
-        # lagrange interpolation from 4 data points (len of t and k)
-        yp += yi * np.prod((xp - x[x != xi]) / (xi - x[x != xi]))
+        kp += yi * np.prod((tp - x[x != xi]) / (xi - x[x != xi]))
 
-    return yp
+    return kp
 
 
 thermal_conductivity_table = {
